@@ -3,8 +3,6 @@
 import os
 import sys
 
-#directory = "C:\\work\\training\\python\\PythonIntroOct2025"
-
 if len(sys.argv) < 2:
     print ("Usage:")
     print ("python folder_size.py DIR")
