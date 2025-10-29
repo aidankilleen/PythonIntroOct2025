@@ -139,7 +139,40 @@ print (names[-1]) # return the last item in the list
 
 
 # building block #7 - functions
+print("hello")
+val = str(12345)
+print ("the answer is " + val)
+len(names)
+
+# built in functions
+# https://docs.python.org/3/library/functions.html
+
+
+# user defined functions
+def greet(name):
+    return "Welcome " + name
+
+print (greet("Aidan"))
+
 # building block #8 - objects
+name = "Aidan"
+
+# name is a string which is an object
+
+print (name.upper())
+
+
+# we will be encountering objects
+# we will be using built in objects
+# we will be using standard library objects
+# we will be using 3rd party objects
+# we will be creating our own user-defined objects.
+
+
+
+
+
+
 
 
 
