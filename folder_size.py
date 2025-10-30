@@ -24,3 +24,6 @@ for (path, _, filenames) in os.walk(directory):
 
 print (f"Total size of {directory} = {size}")
 
+print ("finished")
+
+
