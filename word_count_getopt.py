@@ -7,6 +7,7 @@
 # -c - return the character count
 # -w - return the word count
 
+import getopt
 import sys
 
 
@@ -19,12 +20,15 @@ def show_usage():
     print ("-c - show number of characters")
 
 print ("Word counter")
-
-print (sys.argv)
-
 try:
-    options = [option for option in sys.argv if option.startswith("-")]
-    files = [file_name for file_name in sys.argv[1:] if file_name.startswith("-") == False]
+    argv = sys.argv[1:]
+    (opts, args) = getopt.getopt(argv, "c:l:w:")
+    print (opts)
+    print ("=" * 50)
+    print (args)
+    
+    #options = [option for option in sys.argv if option.startswith("-")]
+    #files = [file_name for file_name in sys.argv[1:] if file_name.startswith("-") == False]
 
     file_name = files[0]
 
