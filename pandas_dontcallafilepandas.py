@@ -1,5 +1,8 @@
 # pandas.py
 
+# do not have a file called pandas.py
+# it will break any code using pandas
+
 import pandas as pd
 
 

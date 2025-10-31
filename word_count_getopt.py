@@ -22,9 +22,11 @@ def show_usage():
 print ("Word counter")
 try:
     argv = sys.argv[1:]
-    (opts, files) = getopt.getopt(argv, "lcwh", "help")
+    (opts, files) = getopt.getopt(argv, "lcw")
     print (opts)
+
     opt_lookup = [opt for opt, _ in opts]
+
     print (opt_lookup)
     print ("=" * 50)
     print (files)
