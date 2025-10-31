@@ -7,7 +7,6 @@
 # -c - return the character count
 # -w - return the word count
 
-import getopt
 import sys
 
 
@@ -20,17 +19,12 @@ def show_usage():
     print ("-c - show number of characters")
 
 print ("Word counter")
+
+print (sys.argv)
+
 try:
-    argv = sys.argv[1:]
-    (opts, files) = getopt.getopt(argv, "lcwh", "help")
-    print (opts)
-    opt_lookup = [opt for opt, _ in opts]
-    print (opt_lookup)
-    print ("=" * 50)
-    print (files)
-    
-    #options = [option for option in sys.argv if option.startswith("-")]
-    #files = [file_name for file_name in sys.argv[1:] if file_name.startswith("-") == False]
+    options = [option for option in sys.argv if option.startswith("-")]
+    files = [file_name for file_name in sys.argv[1:] if file_name.startswith("-") == False]
 
     file_name = files[0]
 
@@ -44,11 +38,11 @@ try:
             words = line.split()
             word_count += len(words)
 
-        if "-l" in opt_lookup:
+        if "-l" in options:
             print (f"lines = {len(line_count)}")
-        if "-c" in opt_lookup:
+        if "-c" in options:
             print (f"characters = {character_count}")
-        if "-w" in opt_lookup:
+        if "-w" in options:
             print (f"words = {word_count}")
 
 except IndexError:
@@ -58,9 +52,7 @@ except IndexError:
 
 except FileNotFoundError:
     print (f"File {file_name} not found")
-except Exception as ex:
-    print (str(ex))
-
+except:
     show_usage()
 
 
